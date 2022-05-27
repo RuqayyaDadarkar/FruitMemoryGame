@@ -1,0 +1,104 @@
+/* HTML ELEMENTS */
+
+body{
+  background-color: #FAFDD6;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 1.25rem;
+}
+
+h1{
+  color: #A2B38B;
+  font-family: 'Fredoka One', cursive;
+  font-size: 3rem;
+  margin: 50px auto 100px;
+  text-align: center;
+}
+
+h6{
+  color: #E4E9BE;
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+}
+
+/* CLASS ELEMENTS */
+
+.container {
+  aspect-ratio: 1;
+  background-color: #E6BA95;
+  border-radius: 20px;
+  column-gap: 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  width: 30%;
+}
+
+.fruit-button{
+  aspect-ratio: 1;
+  align-self: baseline;
+  background-size: contain;
+  margin: auto;
+  width: 80%;
+}
+
+.hoverClass:hover{
+   background-color: #E4E9BE;
+   border-color: #A2B38B;
+}
+
+.pressed{
+  box-shadow: 0 0 20px white;
+  background-color: #828f6f;
+
+}
+.apple{
+  background-image: url("images/apple.png");
+  margin-right: 5px;
+}
+
+.orange{
+  background-image: url("images/orange.png");
+  margin-left: 5px;
+}
+
+.banana{
+  background-image: url("images/banana.png");
+  margin-right: 5px;
+}
+
+.grapes{
+  background-image: url("images/grape.png");
+  margin-left: 5px;
+}
+
+.instructions{
+  background-color: #A2B38B;
+  color: #E4E9BE;
+  line-height: 3rem;
+  margin: 100px auto 0;
+  padding: 5% 7%;
+}
+
+.footer{
+  color: #A2B38B;
+  padding: 5% 10%;
+  text-align: center;
+}
+.wrong-answer{
+  background-color: red;
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 1000px) and (min-width:770px) {
+
+  .container{
+    width: 60%;
+}
+@media only screen and (max-width: 770px) {
+
+.container{
+  width: 80%;
+}
+}
