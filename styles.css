@@ -93,12 +93,24 @@ h6{
 
 @media only screen and (max-width: 1000px) and (min-width:770px) {
 
+  h1{
+    font-size: 4rem;
+  }
+
   .container{
-    width: 60%;
+    width: 80%;
+  }
+
+  .footer{
+    font-size: 2rem;
+  }
+
+
+
 }
 @media only screen and (max-width: 770px) {
 
 .container{
-  width: 80%;
+  width: 90%;
 }
 }
