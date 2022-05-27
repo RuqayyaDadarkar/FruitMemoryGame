@@ -17,6 +17,8 @@ if(!started==true){
 }
 });
 
+
+
 function nextSequence(){
   level++;
 
@@ -115,3 +117,58 @@ function checkAnswer (levelNumber){
     gameSequence = [];
     }
 }
+
+
+// Responsiveness
+
+function mobileScreen (x) {
+  if (x.matches) {
+    $(document).on("tap", function startGame () {
+
+    if(!started==true){
+
+      $("h1").text("Level " + level );
+
+      nextSequence();
+
+      started = true;
+    }
+    });
+
+  $("h1").text("Test Your memory! Tap the screen to start");
+  } else {
+  $("h1").text("Test Your Memory! Press any key to start.");
+  }
+
+  function checkAnswer (levelNumber){
+    if (gameSequence[levelNumber]==userClickedSequence[levelNumber]){
+
+      if(gameSequence.length == userClickedSequence.length){
+        setTimeout(function(){
+            nextSequence();
+        }, 1000);
+
+      }
+
+    }else{
+
+      $("h1").text("Game Over! Tap the screen to restart!")
+  
+      $("body").addClass("wrong-answer");
+
+      setTimeout(function(){$("body").removeClass("wrong-answer");}, 200);
+
+      playSound("wrong");
+
+      started = false;
+
+      level = 0;
+
+      gameSequence = [];
+      }
+  }
+}
+
+var x = window.matchMedia("(max-width: 1000px)");
+mobileScreen(x);
+x.addListener(mobileScreen);
