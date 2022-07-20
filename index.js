@@ -17,7 +17,7 @@ if(!started==true){
 }
 });
 
-$(document).on("touchstart",function startGame () {
+window.ontouchstart(function startGame () {
 
 if(!started==true){
 
