@@ -17,6 +17,18 @@ if(!started==true){
 }
 });
 
+$(document).on("tap",function startGame () {
+
+if(!started==true){
+
+  $("h1").text("Level " + level );
+
+  nextSequence();
+
+  started = true;
+}
+});
+
 
 
 function nextSequence(){
